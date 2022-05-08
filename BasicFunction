@@ -1,0 +1,72 @@
+Select *
+From EmployeeDemographics
+
+Select COUNT(LastName) as LastNameCount
+From EmployeeDemographics
+
+
+Select *
+From EmployeeDemographics
+
+
+Select *
+From EmployeeSalary
+
+
+Select AVG(Salary)
+From EmployeeSalary
+
+
+Select *
+From EmployeeDemographics
+Where Age <= 32 and Gender = 'Male'
+
+Select *
+From EmployeeDemographics
+Where Age <= 32 Or Gender = 'Male'
+
+
+Select *
+From EmployeeDemographics
+Where LastName LIKE 'S%'
+
+
+Select *
+From EmployeeDemographics
+Where LastName LIKE '%S%'
+
+
+
+Select *
+From EmployeeDemographics
+Where FirstName is NOT NULL
+
+
+Select *
+From EmployeeDemographics
+Where FirstName IN ('Jim', 'Michael')
+
+
+
+
+Select Gender, Age, COUNT(Gender) As TotalAgeGender
+From EmployeeDemographics
+GROUP BY Gender, Age
+
+
+Select Gender, COUNT(Gender) As TotalAgeGender
+From EmployeeDemographics
+WHERE Age > 31
+GROUP BY Gender
+ORDER BY Gender
+
+
+Select Gender, COUNT(Gender) As TotalAgeGender
+From EmployeeDemographics
+WHERE Age > 31
+GROUP BY Gender
+ORDER BY Gender
+
+Select *
+From EmployeeDemographics
+ORDER BY 4 Desc, 5 Desc
